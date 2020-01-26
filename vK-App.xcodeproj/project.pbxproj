@@ -13,6 +13,10 @@
 		ED20474B23C8C4FD0083B1FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED20474923C8C4FD0083B1FA /* Main.storyboard */; };
 		ED20474D23C8C5000083B1FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED20474C23C8C5000083B1FA /* Assets.xcassets */; };
 		ED20475023C8C5000083B1FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED20474E23C8C5000083B1FA /* LaunchScreen.storyboard */; };
+		EDFBE3A123DE0F1000B44F39 /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE3A023DE0F1000B44F39 /* GroupsTableViewController.swift */; };
+		EDFBE3A323DE151D00B44F39 /* GroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE3A223DE151D00B44F39 /* GroupsTableViewCell.swift */; };
+		EDFBE3A623DE1F0D00B44F39 /* MyGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE3A523DE1F0D00B44F39 /* MyGroupsTableViewCell.swift */; };
+		EDFBE3A823DE1F2500B44F39 /* MyGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE3A723DE1F2500B44F39 /* MyGroupsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		ED20474C23C8C5000083B1FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED20474F23C8C5000083B1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED20475123C8C5000083B1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDFBE3A023DE0F1000B44F39 /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
+		EDFBE3A223DE151D00B44F39 /* GroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewCell.swift; sourceTree = "<group>"; };
+		EDFBE3A523DE1F0D00B44F39 /* MyGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableViewCell.swift; sourceTree = "<group>"; };
+		EDFBE3A723DE1F2500B44F39 /* MyGroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,9 @@
 		ED20474223C8C4FD0083B1FA /* vK-App */ = {
 			isa = PBXGroup;
 			children = (
+				EDFBE3A423DE1EF500B44F39 /* MyGroups */,
+				EDFBE39F23DE0E0E00B44F39 /* Friends */,
+				EDFBE39E23DE0DFF00B44F39 /* Groups */,
 				ED20474323C8C4FD0083B1FA /* AppDelegate.swift */,
 				ED20474523C8C4FD0083B1FA /* SceneDelegate.swift */,
 				ED20474723C8C4FD0083B1FA /* LoginController.swift */,
@@ -65,6 +76,31 @@
 				ED20475123C8C5000083B1FA /* Info.plist */,
 			);
 			path = "vK-App";
+			sourceTree = "<group>";
+		};
+		EDFBE39E23DE0DFF00B44F39 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				EDFBE3A023DE0F1000B44F39 /* GroupsTableViewController.swift */,
+				EDFBE3A223DE151D00B44F39 /* GroupsTableViewCell.swift */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		EDFBE39F23DE0E0E00B44F39 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		EDFBE3A423DE1EF500B44F39 /* MyGroups */ = {
+			isa = PBXGroup;
+			children = (
+				EDFBE3A523DE1F0D00B44F39 /* MyGroupsTableViewCell.swift */,
+				EDFBE3A723DE1F2500B44F39 /* MyGroupsTableViewController.swift */,
+			);
+			path = MyGroups;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDFBE3A323DE151D00B44F39 /* GroupsTableViewCell.swift in Sources */,
 				ED20474823C8C4FD0083B1FA /* LoginController.swift in Sources */,
+				EDFBE3A823DE1F2500B44F39 /* MyGroupsTableViewController.swift in Sources */,
+				EDFBE3A123DE0F1000B44F39 /* GroupsTableViewController.swift in Sources */,
 				ED20474423C8C4FD0083B1FA /* AppDelegate.swift in Sources */,
 				ED20474623C8C4FD0083B1FA /* SceneDelegate.swift in Sources */,
+				EDFBE3A623DE1F0D00B44F39 /* MyGroupsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
