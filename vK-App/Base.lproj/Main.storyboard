@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nrE-5m-BkS">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -364,14 +364,14 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="friendCell" id="liW-Hq-4d7" customClass="MyFriendsCollectionViewCell" customModule="vK_App" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendCell" id="liW-Hq-4d7" customClass="MyFriendsCollectionViewCell" customModule="vK_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JR4-E8-beO">
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M1g-8n-jeb">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="M1g-8n-jeb">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wk9-O0-s9W">
@@ -403,13 +403,10 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="yef-IC-9gr"/>
-                    <connections>
-                        <segue destination="9da-nR-L9x" kind="show" id="RlQ-lD-mZI"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lx5-fS-WHx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8233" y="1481"/>
+            <point key="canvasLocation" x="8231.8840579710159" y="1480.5803571428571"/>
         </scene>
         <!--Groups Table View Controller-->
         <scene sceneID="bL2-ed-KZZ">
@@ -473,7 +470,7 @@
             <objects>
                 <tableViewController id="9da-nR-L9x" customClass="MyFriendsTableViewController" customModule="vK_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZTD-hN-vCD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -512,6 +509,7 @@
                                 <connections>
                                     <outlet property="myFriendsImage" destination="iut-xx-9RC" id="PFp-2m-TUC"/>
                                     <outlet property="myFriendsName" destination="aYb-fp-rMf" id="mHg-nL-GVn"/>
+                                    <segue destination="1gT-UZ-C7f" kind="show" id="T3J-8x-r96"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -606,12 +604,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="442" height="604"/>
         <image name="iPhone X Wallpapers (AKKet.com) 148" width="1242" height="2208"/>
         <image name="person.2" catalog="system" width="64" height="40"/>
         <image name="person.3.fill" catalog="system" width="71" height="34"/>
         <image name="vk-logo-black-transparent" width="2400" height="2398"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="RlQ-lD-mZI"/>
-    </inferredMetricsTieBreakers>
 </document>
