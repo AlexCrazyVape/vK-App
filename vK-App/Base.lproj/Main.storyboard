@@ -391,6 +391,7 @@
                                         <constraint firstItem="wk9-O0-s9W" firstAttribute="top" secondItem="M1g-8n-jeb" secondAttribute="bottom" constant="10" id="rXV-Zn-8Kv"/>
                                     </constraints>
                                 </collectionViewCellContentView>
+                                <size key="customSize" width="150" height="150"/>
                                 <connections>
                                     <outlet property="friendImage" destination="M1g-8n-jeb" id="yGc-Ld-4xo"/>
                                     <outlet property="friendName" destination="wk9-O0-s9W" id="PJn-kA-eBO"/>
