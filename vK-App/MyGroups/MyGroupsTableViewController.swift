@@ -10,7 +10,9 @@ import UIKit
 
 class MyGroupsTableViewController: UITableViewController {
     
-
+    var groups = [
+        Group(groupname: "Pain", avatarPath: "pain")]
+    
     @IBAction func addGroup(segue: UIStoryboardSegue) {
         
         // Проверяем идентификатор перехода, чтобы убедиться, что это нужный
@@ -20,9 +22,10 @@ class MyGroupsTableViewController: UITableViewController {
         // Получаем индекс выделенной ячейки
             if let indexPath = groupsTableViewController.tableView.indexPathForSelectedRow {
         // Получаем город по индексу
-                let group = groupsTableViewController.groups[indexPath.row]
+                let group = groupsTableViewController.groups[indexPath.section].self
         // Проверяем, что такого города нет в списке
-                if !groups.contains(group) {
+                if !groups.contains(group){
+               
         // Добавляем город в список выбранных
                     groups.append(group)
         
@@ -33,7 +36,6 @@ class MyGroupsTableViewController: UITableViewController {
     }
 
 
-    var groups = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,11 +50,11 @@ class MyGroupsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+  /*  override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return groups.count
     }
-
+*/
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return groups.count
@@ -60,13 +62,11 @@ class MyGroupsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myGroups", for: indexPath) as! MyGroupsTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "myGroups", for: indexPath) as? MyGroupsTableViewCell else {return UITableViewCell()}
         
-        let group = groups[indexPath.row]
-        
-        cell.myGroupsName.text = group
-        
-
+      
+        cell.myGroupsName.text = groups[indexPath.row].groupname
+        cell.myGroupsImage.image = UIImage(named: groups[indexPath.row].avatarPath)
         return cell
     }
     

@@ -10,11 +10,15 @@ import UIKit
 
 class MyFriendsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var myFriendsImage: UIImageView!
-    @IBOutlet weak var myFriendsName: UILabel!
+
+    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var username: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        avatar.layer.cornerRadius = avatar.frame.size.height / 2
+        avatar.contentMode = .scaleAspectFill
+        avatar.layer.masksToBounds = true
         // Initialization code
     }
 

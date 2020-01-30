@@ -17,6 +17,8 @@
 		ED9E10D423DE3DC000755914 /* MyFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9E10D323DE3DC000755914 /* MyFriendsTableViewCell.swift */; };
 		ED9E10D623DE3DD300755914 /* MyFriendsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9E10D523DE3DD300755914 /* MyFriendsCollectionViewController.swift */; };
 		ED9E10D823DE3DE400755914 /* MyFriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9E10D723DE3DE400755914 /* MyFriendsCollectionViewCell.swift */; };
+		EDED3B8023E2383A00C4D9D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDED3B7F23E2383A00C4D9D5 /* User.swift */; };
+		EDED3B8923E254B600C4D9D5 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDED3B8823E254B600C4D9D5 /* Group.swift */; };
 		EDFBE3A123DE0F1000B44F39 /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE3A023DE0F1000B44F39 /* GroupsTableViewController.swift */; };
 		EDFBE3A323DE151D00B44F39 /* GroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE3A223DE151D00B44F39 /* GroupsTableViewCell.swift */; };
 		EDFBE3A623DE1F0D00B44F39 /* MyGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBE3A523DE1F0D00B44F39 /* MyGroupsTableViewCell.swift */; };
@@ -36,6 +38,8 @@
 		ED9E10D323DE3DC000755914 /* MyFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewCell.swift; sourceTree = "<group>"; };
 		ED9E10D523DE3DD300755914 /* MyFriendsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsCollectionViewController.swift; sourceTree = "<group>"; };
 		ED9E10D723DE3DE400755914 /* MyFriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsCollectionViewCell.swift; sourceTree = "<group>"; };
+		EDED3B7F23E2383A00C4D9D5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EDED3B8823E254B600C4D9D5 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		EDFBE3A023DE0F1000B44F39 /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
 		EDFBE3A223DE151D00B44F39 /* GroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewCell.swift; sourceTree = "<group>"; };
 		EDFBE3A523DE1F0D00B44F39 /* MyGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableViewCell.swift; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 		ED20474223C8C4FD0083B1FA /* vK-App */ = {
 			isa = PBXGroup;
 			children = (
+				EDED3B7E23DFA28100C4D9D5 /* Models */,
 				EDFBE3A423DE1EF500B44F39 /* MyGroups */,
 				EDFBE39F23DE0E0E00B44F39 /* Friends */,
 				EDFBE39E23DE0DFF00B44F39 /* Groups */,
@@ -84,6 +89,15 @@
 				ED20475123C8C5000083B1FA /* Info.plist */,
 			);
 			path = "vK-App";
+			sourceTree = "<group>";
+		};
+		EDED3B7E23DFA28100C4D9D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EDED3B7F23E2383A00C4D9D5 /* User.swift */,
+				EDED3B8823E254B600C4D9D5 /* Group.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		EDFBE39E23DE0DFF00B44F39 /* Groups */ = {
@@ -187,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED9E10D823DE3DE400755914 /* MyFriendsCollectionViewCell.swift in Sources */,
+				EDED3B8023E2383A00C4D9D5 /* User.swift in Sources */,
 				EDFBE3A323DE151D00B44F39 /* GroupsTableViewCell.swift in Sources */,
 				ED9E10D223DE3DAF00755914 /* MyFriendsTableViewController.swift in Sources */,
 				ED9E10D623DE3DD300755914 /* MyFriendsCollectionViewController.swift in Sources */,
@@ -195,6 +210,7 @@
 				EDFBE3A123DE0F1000B44F39 /* GroupsTableViewController.swift in Sources */,
 				ED20474423C8C4FD0083B1FA /* AppDelegate.swift in Sources */,
 				ED9E10D423DE3DC000755914 /* MyFriendsTableViewCell.swift in Sources */,
+				EDED3B8923E254B600C4D9D5 /* Group.swift in Sources */,
 				ED20474623C8C4FD0083B1FA /* SceneDelegate.swift in Sources */,
 				EDFBE3A623DE1F0D00B44F39 /* MyGroupsTableViewCell.swift in Sources */,
 			);

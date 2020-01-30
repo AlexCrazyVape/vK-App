@@ -15,6 +15,10 @@ class MyGroupsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        myGroupsImage.layer.cornerRadius = myGroupsImage.frame.size.height / 2
+        myGroupsImage.contentMode = .scaleAspectFill
+        myGroupsImage.layer.masksToBounds = true
         // Initialization code
     }
 

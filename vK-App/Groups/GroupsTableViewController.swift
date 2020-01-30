@@ -8,34 +8,41 @@
 
 import UIKit
 
+struct Section2<T> {
+    var title:String
+    var items: [T]
+}
+
 class GroupsTableViewController: UITableViewController {
 
-
+var groupsSection = [Section<Group>]()
 
     
     var groups = [
-        "Aerosmith",
-        "Bon Jovi",
-        "Korn",
-        "Linkin Park",
-        "Metallica",
-        "Misfits",
-        "Nirvana",
-        "OffSpring",
-        "Pink Floyd",
-        "Red Hot Chili Peppers",
-        "Sex Pistols",
-        "Three Days Grace",
-        "ДДТ",
-        "Ленинград",
-        "Нервы",
-        "План Ломоносова"
+        Group(groupname: "Aerosmith",  avatarPath: "aerosmith"),
+        Group(groupname: "Bon Jovi",  avatarPath: "bonjovi"),
+        Group(groupname: "Korn",  avatarPath: "korn"),
+        Group(groupname: "Linkin Park",  avatarPath: "linkinpark"),
+        Group(groupname: "Metallica",  avatarPath: "metallica"),
+        Group(groupname: "Misfits",  avatarPath: "misfits"),
+        Group(groupname: "Nirvana",  avatarPath: "nirvana"),
+        Group(groupname: "OffSpring",  avatarPath: "offspring"),
+        Group(groupname: "Pink Floyd",  avatarPath: "pinkfloyd"),
+        Group(groupname: "Red Hot Chili Peppers",  avatarPath: "rhcp"),
+        Group(groupname: "Sex Pistols",  avatarPath: "sexpistols"),
+        Group(groupname: "Three Days Grace",  avatarPath: "threedaysgrace"),
+        Group(groupname: "ДДТ",  avatarPath: "ddt"),
+        Group(groupname: "Ленинград",  avatarPath: "leningrad"),
+        Group(groupname: "Нервы",  avatarPath: "nervyi"),
+        Group(groupname: "План Ломоносова",  avatarPath: "planlomonosova")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        let groupsDictionary = Dictionary.init(grouping: groups){ $0.groupname.prefix(1) }
+        groupsSection = groupsDictionary.map { Section(title: String($0.key), items: $0.value)}
+        groupsSection.sort{ $0.title < $1.title }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -47,21 +54,21 @@ class GroupsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return groupsSection.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return groups.count
+        return groupsSection[section].items.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "groupsList", for: indexPath) as! GroupsTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupsList", for: indexPath) as? GroupsTableViewCell else {return UITableViewCell()}
         
-        let group = groups[indexPath.row]
-        
-        cell.allGroupsName.text = group
+         let groupname = groupsSection[indexPath.section].items[indexPath.row].groupname
+        cell.allGroupsName.text = groupname
+        cell.allGroupsImage.image = UIImage(named: groupsSection[indexPath.section].items[indexPath.row].avatarPath)
         
 
         return cell
