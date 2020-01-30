@@ -16,6 +16,8 @@ struct Section<T> {
 
 class MyFriendsTableViewController: UITableViewController {
 
+
+    
     var friendsSection = [Section<User>]()
 
     var friends = [
@@ -45,6 +47,9 @@ class MyFriendsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
 
         let friendsDictionary = Dictionary.init(grouping: friends){ $0.surname.prefix(1) }
         friendsSection = friendsDictionary.map { Section(title: String($0.key), items: $0.value)}

@@ -76,6 +76,7 @@
 		ED20474223C8C4FD0083B1FA /* vK-App */ = {
 			isa = PBXGroup;
 			children = (
+				EDFCED3D23E37C740028AA20 /* Custom */,
 				EDED3B7E23DFA28100C4D9D5 /* Models */,
 				EDFBE3A423DE1EF500B44F39 /* MyGroups */,
 				EDFBE39F23DE0E0E00B44F39 /* Friends */,
@@ -127,6 +128,13 @@
 				EDFBE3A723DE1F2500B44F39 /* MyGroupsTableViewController.swift */,
 			);
 			path = MyGroups;
+			sourceTree = "<group>";
+		};
+		EDFCED3D23E37C740028AA20 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
