@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="CustomCell" customModule="vK_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="428" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUk-Hz-BBY" userLabel="shadow view" customClass="ShadowView" customModule="vK_App" customModuleProvider="target">
+                        <rect key="frame" x="10" y="4" width="72" height="72"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="korn" translatesAutoresizingMaskIntoConstraints="NO" id="nDF-0h-JyZ">
+                                <rect key="frame" x="3.5" y="3.5" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="ayg-Bj-y6O"/>
+                                    <constraint firstAttribute="height" constant="65" id="sYg-PK-21W"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nDF-0h-JyZ" firstAttribute="top" secondItem="IUk-Hz-BBY" secondAttribute="top" constant="3.5" id="D7L-DX-qUM"/>
+                            <constraint firstAttribute="width" constant="72" id="Dy2-yo-R4x"/>
+                            <constraint firstItem="nDF-0h-JyZ" firstAttribute="leading" secondItem="IUk-Hz-BBY" secondAttribute="leading" constant="3.5" id="K2M-Hx-j41"/>
+                            <constraint firstAttribute="bottom" secondItem="nDF-0h-JyZ" secondAttribute="bottom" constant="3.5" id="RI8-kE-rRf"/>
+                            <constraint firstAttribute="height" constant="72" id="dKd-6Y-RYj"/>
+                            <constraint firstAttribute="trailing" secondItem="nDF-0h-JyZ" secondAttribute="trailing" constant="3.5" id="eUr-MP-46O"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                <color key="value" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowViewBorderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowViewBorderColor">
+                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowViewColor">
+                                <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowViewRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowViewOpacity">
+                                <real key="value" value="0.90000000000000002"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLT-hm-QKY">
+                        <rect key="frame" x="92" y="29.5" width="326" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="JLT-hm-QKY" firstAttribute="centerY" secondItem="nDF-0h-JyZ" secondAttribute="centerY" id="2M3-EW-2dh"/>
+                    <constraint firstAttribute="bottom" secondItem="IUk-Hz-BBY" secondAttribute="bottom" constant="4" id="SC6-Qy-4Vg"/>
+                    <constraint firstItem="IUk-Hz-BBY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="TE9-IB-JHA"/>
+                    <constraint firstItem="IUk-Hz-BBY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="YTQ-nu-Hyl"/>
+                    <constraint firstAttribute="trailing" secondItem="JLT-hm-QKY" secondAttribute="trailing" constant="10" id="lD7-Sg-apl"/>
+                    <constraint firstItem="JLT-hm-QKY" firstAttribute="leading" secondItem="IUk-Hz-BBY" secondAttribute="trailing" constant="10" id="nhI-Xo-br1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="139" y="95"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="korn" width="300" height="368"/>
+    </resources>
+</document>
